@@ -1,6 +1,11 @@
 # Burger-Logger 🍔
 
 ## Table of contents:
+* What:
+* How:
+* Technologies used:
+* Imgs:
+* Links 
 
 ## What:
 This is a Burger logger restaurant app, deployed using Heroku!
@@ -13,3 +18,11 @@ This is a Burger logger restaurant app, deployed using Heroku!
 
 ## Techologies used:
 MySQL, Node, Express, Handlebars and a homemade ORM 🍬
+
+## Imgs:
+
+## Links:
+
+[](Link to Heroku)
+
+[Link to Github](https://github.com/teresaheidt/Burger-Logger.git)

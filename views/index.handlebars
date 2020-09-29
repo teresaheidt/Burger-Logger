@@ -24,7 +24,7 @@
 {{!-- <h2 align="center">Burgers that have been devoured!</h2> --}}
 
 <ul>
-  {{#each burger}}
+  {{#each burgers}}
     {{#unless notdevoured}}
       {{> burger/burger-block devoured=true}}
     {{/unless}}
@@ -34,7 +34,7 @@
 {{!-- <h2 align="center">Burgers not devoured!</h2> --}}
 
 <ul align="center">
-  {{#each burger}}
+  {{#each burgers}}
     {{#if devoured}}
       {{> burger/burger-block notDevoured=false}}
     {{/if}}
