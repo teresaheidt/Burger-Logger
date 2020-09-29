@@ -9,7 +9,9 @@ var burger = {
   },
   // variables cols and vals are arrays.
   create: function(cols, vals, cb) {
-    orm.create("burgers", cols, vals, function(res) {
+    orm.create("burgers", ["burger_name", "devoured"],
+    [name, false], cb); 
+    function(res) {
       cb(res);
     });
   },
