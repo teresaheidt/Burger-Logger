@@ -25,18 +25,22 @@
 
 <ul>
   {{#each burgers}}
-    {{#unless notdevoured}}
-      {{> burger/burger-block devoured=true}}
+    {{#unless devoured}}
+      <li>
+        {{burger_name}}
+        <button class="eat-burger" data-id="{{this.id}}">EAT!</button>
+    </li>
     {{/unless}}
   {{/each}}
 </ul>
 
 {{!-- <h2 align="center">Burgers not devoured!</h2> --}}
-
+{{!-- iterate over cheeseburgers with #each --}}
 <ul align="center">
   {{#each burgers}}
     {{#if devoured}}
-      {{> burger/burger-block notDevoured=false}}
+      <li>
+        {{burger_name}}
     {{/if}}
   {{/each}}
 </ul>

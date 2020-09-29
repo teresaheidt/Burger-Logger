@@ -10,10 +10,12 @@ var burger = require("../models/burger.js");
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function (req, res) {
   burger.all(function (data) {
+    console.log("GET from db:", data)
       var hbsObject = {
           burger: data
       };
-      res.render("index", { burgers: hbsObject });
+      res.render("index", { burger: hbsObject });
+   console.log(burger);
   });
 });
   
