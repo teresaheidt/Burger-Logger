@@ -15,18 +15,15 @@ router.get("/", function (req, res) {
           burger: data
       };
       res.render("index", { burger: hbsObject });
-   console.log(burger);
+   console.log(hbsObject);
   });
 });
-  
-
-
 
 router.post("/api/burgers", function(req, res) {
   burger.create([
-    "name", "devoured!"
+    "burger_nsme"
   ], [
-    req.body.name, req.body.devoured
+    req.body.name, 
   ], function(result) {
     // send back the ID of the new quote
     res.json({ id: result.insertId });
@@ -39,7 +36,7 @@ router.put("/api/burgers/:id", function(req, res) {
   console.log("condition", condition);
 
   burger.update({
-    devoured: req.body.devoured
+    name: req.body.name
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // if no rows were changed, then the ID must not exist, so 404
@@ -53,6 +50,7 @@ router.put("/api/burgers/:id", function(req, res) {
 // Delete burger from db.
 router.delete("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
+  
   console.log("condition", condition);
 
   burger.delete(condition, function(result) {
