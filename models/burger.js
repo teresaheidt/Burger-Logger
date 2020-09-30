@@ -8,10 +8,10 @@ var burger = {
     });
   },
   // variables cols and vals are arrays.
-  create: function(name, cb) {
-    orm.create("burgers", ["burger_name"],
-    [name], cb); 
-   
+  create: function(cols, vals, cb) {
+    orm.create("burgers", cols, vals, function(res) {
+      cb(res);
+    });
   },
   update: function(objColVals, cb) {
     orm.update("burgers", objColVals, function(res) {
@@ -20,5 +20,5 @@ var burger = {
   }
 };
 
-// Export the database functions for the controller (catsController.js).
+// Export the database functions for the controller.
 module.exports = burger;
