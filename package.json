@@ -19,6 +19,7 @@
   "homepage": "https://github.com/teresaheidt/Burger-Logger#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "config.json": "0.0.4",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
     "gitignore": "^0.6.0",
