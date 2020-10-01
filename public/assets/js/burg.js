@@ -1,8 +1,9 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".change-devour").on("click", function(event) {
-      var id = $(this).data("id");
-      var newDevour = $(this).data("newDevour");
+    $(".change-eat").on("click", function(event) {
+      var id = $(this).val();
+      console.log(id);
+      var newDevour = $(this).data("newdevour");
   
       var newDevourState = {
         devoured: newDevour
@@ -27,8 +28,8 @@ $(function() {
       event.preventDefault();
   
       var newBurger = {
-        burger_name: $("#burg").val().trim(),
-        devoured: 0
+        burger: $("#burg").val().trim(),
+        devoured: $("[burger=devoured]:checked").val.trim()
       };
   
       // Send the POST request.
