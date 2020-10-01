@@ -5,7 +5,7 @@
 * How:
 * Technologies used:
 * Imgs:
-* Links 
+* Links: 
 
 ## What:
 This is a Burger logger restaurant app, deployed using Heroku!
