@@ -21,8 +21,12 @@ MySQL, Node, Express, Handlebars and a homemade ORM 🍬
 
 ## Imgs:
 
+![screenshot](public/assets/imgs/burgerapp.png)
+
 ## Links:
 
 [](Link to Heroku)
 
 [Link to Github](https://github.com/teresaheidt/Burger-Logger.git)
+
+[Link to Video Demo](https://drive.google.com/file/d/12bTZAOrDmkX-9-ct9BbwNHGBgeav5ZMP/view)
