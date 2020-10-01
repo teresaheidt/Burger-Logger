@@ -19,8 +19,9 @@
 
 <br>
 
-{{!-- <h2 align="center">Burgers that have been devoured!</h2> --}}
- 
+ <div class="row">
+   <div class="col">
+   <h2>Burgers not devoured!</h2>
 <ul id="eatOne">
   {{#each burgers}}
     {{#unless this.devoured}}
@@ -30,26 +31,30 @@
 	<button class="change-eat" value={{this.id}} data-eaten={{this.devoured}}>
     Devour It!
 	</button>
-{{!-- 
-	<button class="delete-burger" data-id={{this.id}}>DELETE!</button> --}}
+
 </li>
     {{/unless}}
   {{/each}}
 
 </ul>
+</div>
 
-{{!-- <h2 align="center">Burgers not devoured!</h2> --}}
+<div class="col">
+<h2>Burgers devoured!</h2>
 {{!-- iterate over cheeseburgers with #each --}}
-{{!-- <ul id="eatTwo" align="center">
+ <ul id="eatTwo">
   {{#each burgers}}
-   {{this.id}}
     {{#if devoured}}
       <li>
-        {{> burger/burger-block eat=false}}
-    {{/if}}
-  {{/each}}
-</ul> --}}
+        {{this.burger_name}}
+      </li>
+        {{/if}}
+        {{/each}}
+</ul>
+</div>
+</div>
 
+<div class="make" align="center">
 <h2 class="add">Make yourself a Burger</h2>
 
 <form class="create-form">
@@ -59,16 +64,12 @@
     <input type="text" id="burg" name="name">
   </div>
 
-  {{!-- <div class="form-group">
-    <label for="dev">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> devoured!<br>
-    <input type="radio" name="devoured" value="0"> Not devoured
-  </div> --}}
-
   <br>
 
 <div class="button">
-  <button align="center" type="submit">Devoured the burger!</button>
+  <button align="center" type="submit">Add a burger!</button>
 </div>
 
 </form>
+
+</div>
